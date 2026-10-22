@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ورود و ثبت‌نام | High Tech</title>
+<meta name="description" content="ورود به حساب کاربری یا ثبت‌نام در فروشگاه High Tech.">
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+
+<div class="aura"><span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="grid"></span></div>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <div class="auth-head">
+          <div class="mark-lg">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="15.4" y="15.2" width="3.5" height="17.6" rx="1.75"/><rect x="15.4" y="22.25" width="11.4" height="3.5" rx="1.75"/><path d="M31.4 13.6 25.2 23.9h4.9l-2.7 10.5 8.4-12.1h-5.2l3.1-8.7z"/></svg>
+          </div>
+          <h1 id="authTitle">خوش برگشتی</h1>
+          <p id="authSub">برای پیگیری سفارش‌ها و ذخیره‌ی علاقه‌مندی‌ها وارد شو.</p>
+        </div>
+
+        <div class="alert alert--err" id="authAlert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.4h.01"/></svg>
+          <span id="authAlertMsg"></span>
+        </div>
+        <div class="alert alert--ok" id="authOk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span id="authOkMsg"></span>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="on" data-tab="login" type="button">ورود</button>
+          <button data-tab="register" type="button">ثبت‌نام</button>
+        </div>
+
+        <!-- login -->
+        <form class="auth-form on" id="formLogin" novalidate>
+          <div class="field">
+            <label>ایمیل <span class="req">*</span></label>
+            <input id="lEmail" type="email" inputmode="email" placeholder="you@example.com">
+            <span class="error">ایمیل معتبر وارد کنید.</span>
+          </div>
+          <div class="field">
+            <label>رمز عبور <span class="req">*</span></label>
+            <input id="lPass" type="password" placeholder="••••••••">
+            <span class="error">رمز عبور را وارد کنید.</span>
+          </div>
+          <label class="check-row">
+            <input type="checkbox" id="lRemember">
+            <span>مرا به خاطر بسپار</span>
+          </label>
+          <button class="btn btn--primary btn--block" type="submit">ورود به حساب</button>
+          <p class="hint" style="text-align:center;font-size:.8rem;color:var(--muted-2)">
+            هنوز ثبت‌نام نکردی؟ روی تب «ثبت‌نام» بزن.
+          </p>
+        </form>
+
+        <!-- register -->
+        <form class="auth-form" id="formRegister" novalidate>
+          <div class="field">
+            <label>نام و نام خانوادگی <span class="req">*</span></label>
+            <input id="rName" placeholder="مثلاً محمد رضایی">
+            <span class="error">نام را کامل وارد کنید.</span>
+          </div>
+          <div class="field">
+            <label>ایمیل <span class="req">*</span></label>
+            <input id="rEmail" type="email" inputmode="email" placeholder="you@example.com">
+            <span class="error">ایمیل معتبر وارد کنید.</span>
+          </div>
+          <div class="field">
+            <label>شماره موبایل <span class="hint">(اختیاری)</span></label>
+            <input id="rPhone" inputmode="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+            <span class="error">شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود.</span>
+          </div>
+          <div class="field">
+            <label>رمز عبور <span class="req">*</span></label>
+            <input id="rPass" type="password" placeholder="حداقل ۶ کاراکتر">
+            <span class="error">رمز عبور باید حداقل ۶ کاراکتر باشد.</span>
+          </div>
+          <div class="field">
+            <label>تکرار رمز عبور <span class="req">*</span></label>
+            <input id="rPass2" type="password" placeholder="••••••••">
+            <span class="error">تکرار رمز عبور یکسان نیست.</span>
+          </div>
+          <label class="check-row" id="termsRow">
+            <input type="checkbox" id="rTerms">
+            <span>قوانین و شرایط High Tech را می‌پذیرم.</span>
+          </label>
+          <span class="error" id="termsErr" style="display:none;font-size:.78rem;color:#fca5a5;margin-top:-8px">برای ثبت‌نام باید قوانین را بپذیرید.</span>
+          <button class="btn btn--primary btn--block" type="submit">ساخت حساب کاربری</button>
+        </form>
+
+        <div class="auth-foot">
+          <a href="index.html">بازگشت به فروشگاه</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

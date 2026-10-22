@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فروشگاه | High Tech</title>
+<meta name="description" content="همه محصولات High Tech — ماوس، کیبورد، هدست، مانیتور و قطعات داخلی با فیلتر قیمت و برند.">
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+
+<div class="aura"><span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="grid"></span></div>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <div class="crumbs">
+        <a href="index.html">خانه</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        <span>فروشگاه</span>
+      </div>
+      <h1 class="h-lg">همه <span class="grad-text">محصولات</span></h1>
+      <p class="lead" style="margin-top:10px">بین بیش از ۸۵۰ محصول متنوع جستجو کن و دقیقاً همون چیزی که می‌خوای رو پیدا کن.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="shop-layout">
+
+        <!-- Sidebar -->
+        <aside class="filters" id="filters">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+            فیلترها
+          </h4>
+
+          <div class="filter-group">
+            <h5>دسته‌بندی</h5>
+            <div class="filter-list" id="catFilter"></div>
+          </div>
+
+          <div class="filter-group">
+            <h5>برند</h5>
+            <div class="filter-list" id="brandFilter"></div>
+          </div>
+
+          <div class="filter-group">
+            <h5>حداکثر قیمت</h5>
+            <div class="range-row">
+              <input type="range" id="priceRange" min="0" max="45000000" step="500000" value="45000000">
+            </div>
+            <div class="range-val" id="priceLabel" style="margin-top:10px">تا ۴۵٬۰۰۰٬۰۰۰ تومان</div>
+          </div>
+
+          <div class="filter-group">
+            <h5>امتیاز</h5>
+            <div class="filter-list" id="rateFilter"></div>
+          </div>
+
+          <button class="btn btn--ghost btn--block btn--sm" style="margin-top:6px" onclick="resetFilters()">حذف همه فیلترها</button>
+        </aside>
+
+        <!-- Products -->
+        <div>
+          <div class="toolbar">
+            <span class="res" id="resultCount"></span>
+            <select class="select" id="sortSelect" onchange="applyShop()">
+              <option value="pop">مرتب‌سازی: پیشنهاد ما</option>
+              <option value="new">جدیدترین</option>
+              <option value="cheap">ارزان‌ترین</option>
+              <option value="expensive">گران‌ترین</option>
+              <option value="rating">بیشترین امتیاز</option>
+              <option value="off">بیشترین تخفیف</option>
+            </select>
+          </div>
+          <div class="active-filters" id="activeFilters"></div>
+          <div class="prod-grid prod-grid--3" id="shopGrid"></div>
+          <div class="empty" id="shopEmpty" style="display:none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <h4>محصولی پیدا نشد</h4>
+            <p>فیلترها رو تغییر بده یا همه رو حذف کن.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
